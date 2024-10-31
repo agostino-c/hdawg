@@ -1,1 +1,186 @@
 !
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Dog Template</title>
+    <!-- Begin Static files ** CHANGE TO LOCALLY HOSTED OR CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- End CDN -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto';
+        }
+
+
+        nav {
+            width: 100vw;
+        }
+
+        .red-bg {
+            background: linear-gradient(90deg, hsla(0, 70%, 50%, 1) 0%, hsla(0, 100%, 40%, 1) 100%);
+            background-image: './texture.png';
+            background-blend-mode: overlay;
+        }
+
+
+        .info-header {
+            height: 10vh;
+            display: flex;
+        }
+
+        .information-sec {
+            flex: 3;
+        }
+
+        .socials-sec {
+            flex: 1;
+        }
+
+        .info-header ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            column-gap: 1em;
+        }
+
+        .info-header i {
+            font-size: large;
+        }
+
+
+        .information-sec li {
+            display: flex;
+            align-items: center;
+            column-gap: 1.2em;
+            font-size: medium;
+            color: white;
+        }
+
+
+        /* .nav-items {
+            height: 10vh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-items .navbar-brand {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .nav-items ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1em;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            font-size: large;
+
+            color: #323232;
+        }
+
+        .active {
+            font-weight: normal;
+        } */
+
+        .nav-items {
+            height: 10vh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            /* padding: 0 75px; */
+            /* Add horizontal padding for space */
+        }
+
+        .navbar-brand {
+            font-size: larger;
+            font-weight: bold;
+            flex: 3;
+            /* Push the brand to the left */
+        }
+
+        .nav-items ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            /* Center links */
+            align-items: center;
+            column-gap: 2em;
+            flex: 1;
+            /* Increased gap for better spacing */
+        }
+
+        .nav-item {
+            text-decoration: none;
+            font-size: large;
+            color: #323232;
+            padding: 10px 15px;
+            /* Add padding for clickable area */
+            border-radius: 5px;
+            /* Slightly rounded corners */
+            transition: background-color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .nav-item:hover {
+            background-color: #f0f0f0;
+            /* Light background on hover */
+            color: #c0392b;
+            /* Change text color on hover */
+        }
+
+        .active {
+            font-weight: normal;
+            border-bottom: 2px solid #c0392b;
+            /* Underline for the active link */
+        }
+    </style>
+</head>
+
+<body class="red-bg">
+    <nav>
+        <div class="info-header red-bg">
+            <ul class="information-sec">
+                <li>
+                    <i class="fa-solid fa-globe"></i>
+                    Lake Havasu City, AZ
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@exampledomain.com
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    928-000-0000
+                </li>
+            </ul>
+            <ul class="socials-sec">
+                <li>IG</li>
+            </ul>
+        </div>
+xt
+    </nav>
+</body>
+
+</html>
