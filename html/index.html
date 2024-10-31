@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hot Dog Template</title>
-    <!-- Static files ** Remember to replace with local or CDN -->
+    <title>Hot Dog Cart Vendor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -19,7 +18,7 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        /* Overall Layout */
+        /* Body and Color Scheme */
         body {
             background: #f8f9fa;
             color: #333;
@@ -27,110 +26,147 @@
 
         .red-bg {
             background: linear-gradient(90deg, #d32f2f, #c0392b);
-        }
-
-        /* Info Header */
-        .info-header {
-            height: 60px;
-            display: flex;
-            padding: 0 50px;
-            align-items: center;
             color: white;
-            font-size: 0.9rem;
-        }
-
-        .info-header ul {
-            list-style-type: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .info-header li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* Socials */
-        .socials-sec {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: white;
-        }
-
-        .socials-sec li:hover {
-            color: #f5c6c6;
-            cursor: pointer;
         }
 
         /* Navbar */
+        .info-header,
         .nav-items {
-            height: 60px;
-            background-color: white;
             display: flex;
             align-items: center;
             padding: 0 50px;
+            height: 60px;
+            color: white;
+        }
+
+        .nav-items {
+            background-color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .nav-items ul {
-            list-style-type: none;
+        /* About Section */
+        .about-section {
             display: flex;
-            gap: 1.5rem;
-            margin-left: auto;
+            padding: 50px;
+            gap: 2rem;
+            align-items: center;
         }
 
-        .nav-item {
-            font-size: 1rem;
-            color: #333;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-text {
+            max-width: 500px;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: #c0392b;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #333;
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #f1c40f;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 3rem;
+            width: 100%;
+            max-width: 800px;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info i {
+            color: #f1c40f;
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            flex: 2;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
             border-radius: 4px;
-            transition: all 0.3s ease;
+            font-size: 1rem;
         }
 
-        .nav-item:hover {
-            background-color: #f8f8f8;
-            color: #c0392b;
+        .contact-form input,
+        .contact-form textarea {
+            background-color: #555;
+            color: white;
         }
 
-        .active {
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #bbb;
+        }
+
+        .contact-form button {
+            background-color: #c0392b;
+            color: white;
             font-weight: bold;
-            color: #c0392b;
-            border-bottom: 2px solid #c0392b;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #a7281f;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
 
-            .info-header,
-            .nav-items {
+            .about-section,
+            .contact-content {
                 flex-direction: column;
-                padding: 0 20px;
-                height: auto;
-            }
-
-            .navbar-brand {
-                margin-bottom: 10px;
-            }
-
-            .nav-items ul {
-                flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav>
         <div class="info-header red-bg">
             <ul class="information-sec">
@@ -138,18 +174,49 @@
                 <li><i class="fa-solid fa-envelope"></i> hello@exampledomain.com</li>
                 <li><i class="fa-solid fa-phone"></i> 928-000-0000</li>
             </ul>
-            <ul class="socials-sec">
-                <li><i class="fab fa-instagram"></i> IG</li>
-            </ul>
         </div>
         <div class="nav-items">
-            <div class="navbar-brand">PLACEHOLDER</div>
+            <div class="navbar-brand">Hot Dog Vendor</div>
             <ul>
                 <li><a class="nav-item active" href="#">One</a></li>
                 <li><a class="nav-item" href="#">Two</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-img">
+            <img src="https://via.placeholder.com/400x300" alt="Delicious Hot Dog">
+        </div>
+        <div class="about-text">
+            <h2>Best Hot Dogs in Town!</h2>
+            <p>Our hot dog cart serves the most delicious, juicy, and freshly-made hot dogs. Made with love and the
+                finest ingredients, we bring you an unforgettable street food experience. Come grab a bite and taste the
+                difference!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-header">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> hello@exampledomain.com</p>
+                <p><i class="fa-solid fa-phone"></i> 928-000-0000</p>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
