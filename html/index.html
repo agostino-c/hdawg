@@ -89,8 +89,10 @@
 
         .about-section {
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
             padding: 50px;
             gap: 2rem;
         }
@@ -130,7 +132,7 @@
         .contact-header h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #f1c40f;
+            color: #c0392b;
         }
 
         .contact-content {
@@ -150,7 +152,7 @@
         }
 
         .contact-info i {
-            color: #f1c40f;
+            color: #c0392b;
             margin-right: 10px;
         }
 
@@ -196,8 +198,35 @@
             background-color: #a7281f;
         }
 
+
+        .book-now {
+            background-color: #c0392b;
+            /* Button color */
+            color: white;
+            /* Text color */
+            padding: 10px 20px;
+            /* Padding */
+            border: none;
+            /* No border */
+            border-radius: 4px;
+            /* Rounded corners */
+            font-size: 1rem;
+            /* Font size */
+            cursor: pointer;
+            /* Pointer cursor */
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .book-now:hover {
+            background-color: #a7281f;
+            /* Darker shade on hover */
+        }
+
+
         /* Responsive Design */
         @media (max-width: 768px) {
+
             .about-section,
             .contact-content {
                 flex-direction: column;
@@ -244,7 +273,10 @@
         </div>
         <div class="about-text">
             <h2>Best Hot Dogs in Town!</h2>
-            <p>Our hot dog cart serves the most delicious, juicy, and freshly-made hot dogs. Made with love and the finest ingredients, we bring you an unforgettable street food experience. Come grab a bite and taste the difference!</p>
+            <p>Our hot dog cart serves the most delicious, juicy, and freshly-made hot dogs. Made with love and the
+                finest ingredients, we bring you an unforgettable street food experience. Try a bite and taste the
+                difference!</p>
+            <button class="book-now">Book Now</button>
         </div>
     </section>
 
@@ -262,7 +294,7 @@
                 <form action="#">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <textarea rows="5" style="resize: none;" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
