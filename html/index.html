@@ -25,23 +25,58 @@
         }
 
         .red-bg {
-            background: linear-gradient(90deg, #d32f2f, #c0392b);
+            background: #c0392b;
             color: white;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Info Header */
+        .info-header ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .info-header li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         /* Navbar */
-        .info-header,
-        .nav-items {
+        .navbar {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding: 0 50px;
-            height: 60px;
-            color: white;
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .nav-items {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c0392b;
+        }
+
+        .nav-items ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            color: #c0392b;
         }
 
         /* About Section */
@@ -155,31 +190,37 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-
             .about-section,
             .contact-content {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .info-header ul {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Info Header -->
+    <div class="info-header red-bg">
+        <ul>
+            <li><i class="fa-solid fa-globe"></i> Lake Havasu City, AZ</li>
+            <li><i class="fa-solid fa-envelope"></i> hello@exampledomain.com</li>
+            <li><i class="fa-solid fa-phone"></i> 928-000-0000</li>
+        </ul>
+    </div>
+
     <!-- Navbar -->
-    <nav>
-        <div class="info-header red-bg">
-            <ul class="information-sec">
-                <li><i class="fa-solid fa-globe"></i> Lake Havasu City, AZ</li>
-                <li><i class="fa-solid fa-envelope"></i> hello@exampledomain.com</li>
-                <li><i class="fa-solid fa-phone"></i> 928-000-0000</li>
-            </ul>
-        </div>
+    <nav class="navbar">
+        <div class="navbar-brand">Hot Dog Vendor</div>
         <div class="nav-items">
-            <div class="navbar-brand">Hot Dog Vendor</div>
             <ul>
-                <li><a class="nav-item active" href="#">One</a></li>
-                <li><a class="nav-item" href="#">Two</a></li>
+                <li class="nav-item"><a href="#" class="active">One</a></li>
+                <li class="nav-item"><a href="#">Two</a></li>
             </ul>
         </div>
     </nav>
@@ -191,9 +232,7 @@
         </div>
         <div class="about-text">
             <h2>Best Hot Dogs in Town!</h2>
-            <p>Our hot dog cart serves the most delicious, juicy, and freshly-made hot dogs. Made with love and the
-                finest ingredients, we bring you an unforgettable street food experience. Come grab a bite and taste the
-                difference!</p>
+            <p>Our hot dog cart serves the most delicious, juicy, and freshly-made hot dogs. Made with love and the finest ingredients, we bring you an unforgettable street food experience. Come grab a bite and taste the difference!</p>
         </div>
     </section>
 
