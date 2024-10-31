@@ -4,148 +4,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hot Dog Template</title>
-    <!-- Begin Static files ** CHANGE TO LOCALLY HOSTED OR CDN -->
+    <title>Hot Dog Cart Vendor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <!-- End CDN -->
     <style>
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto';
+            font-family: 'Roboto', sans-serif;
         }
 
-        nav {
-            width: 100vw;
+        /* Body and Color Scheme */
+        body {
+            background: #f8f9fa;
+            color: #333;
         }
 
         .red-bg {
-            background: linear-gradient(90deg, hsla(0, 70%, 50%, 1) 0%, hsla(0, 100%, 40%, 1) 100%);
-            background-image: './texture.png';
-            background-blend-mode: overlay;
-        }
-
-        .info-header {
-            height: 10vh;
-            display: flex;
-            padding: 0 75px; /* Added padding for consistency */
-            align-items: center; /* Center items vertically */
-        }
-
-        .information-sec {
-            flex: 3;
-        }
-
-        .socials-sec {
-            flex: 1;
-            display: flex;
-            align-items: center; /* Center social items vertically */
-        }
-
-        .info-header ul {
-            list-style-type: none;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            column-gap: 1em;
-        }
-
-        .info-header i {
-            font-size: large;
-        }
-
-        .information-sec li {
-            display: flex;
-            align-items: center;
-            column-gap: 1.2em;
-            font-size: medium;
+            background: #c0392b;
             color: white;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .nav-items {
-            height: 10vh; /* Match the height */
-            background-color: white;
+        /* Info Header */
+        .info-header ul {
+            list-style: none;
             display: flex;
-            align-items: center; /* Center items vertically */
-            padding: 0 75px; /* Added horizontal padding for consistency */
+            gap: 2rem;
+        }
+
+        .info-header li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
-            font-size: larger;
-            font-weight: bold;
-            flex: 3; /* Push the brand to the left */
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c0392b;
         }
 
         .nav-items ul {
-            list-style-type: none;
-            margin: 0;
+            list-style: none;
             display: flex;
-            align-items: center; /* Center links vertically */
-            column-gap: 2em; /* Consistent gap */
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            color: #c0392b;
+        }
+
+        /* About Section */
+        /* .about-section {
+            display: flex;
+            padding: 50px;
+            gap: 2rem;
+            align-items: center;
+        } */
+
+        .about-section {
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            padding: 50px;
+            gap: 2rem;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-text {
+            max-width: 500px;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: #c0392b;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #333;
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #c0392b;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 3rem;
+            width: 100%;
+            max-width: 800px;
+            align-items: flex-start;
+        }
+
+        .contact-info {
             flex: 1;
         }
 
-        .nav-item {
-            text-decoration: none;
-            font-size: large;
-            color: #323232;
-            padding: 10px 15px; /* Add padding for clickable area */
-            border-radius: 5px; /* Slightly rounded corners */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        .contact-info p {
+            margin-bottom: 1rem;
         }
 
-        .nav-item:hover {
-            background-color: #f0f0f0; /* Light background on hover */
-            color: #c0392b; /* Change text color on hover */
+        .contact-info i {
+            color: #c0392b;
+            margin-right: 10px;
         }
 
-        .active {
-            font-weight: normal;
-            border-bottom: 2px solid #c0392b; /* Underline for the active link */
+        .contact-form {
+            flex: 2;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background-color: #555;
+            color: white;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #bbb;
+        }
+
+        .contact-form button {
+            background-color: #c0392b;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #a7281f;
+        }
+
+
+        .book-now {
+            background-color: #c0392b;
+            /* Button color */
+            color: white;
+            margin-top: 1em;
+            /* Text color */
+            padding: 10px 20px;
+            /* Padding */
+            border: none;
+            /* No border */
+            border-radius: 4px;
+            /* Rounded corners */
+            font-size: 1rem;
+            /* Font size */
+            cursor: pointer;
+            /* Pointer cursor */
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .book-now:hover {
+            background-color: #a7281f;
+            /* Darker shade on hover */
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .about-section,
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-header ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .mHide {
+                display: none !important;
+            }
         }
     </style>
 </head>
 
-<body class="red-bg">
-    <nav>
-        <div class="info-header red-bg">
-            <ul class="information-sec">
-                <li>
-                    <i class="fa-solid fa-globe"></i>
-                    Lake Havasu City, AZ
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    hello@exampledomain.com
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    928-000-0000
-                </li>
-            </ul>
-            <ul class="socials-sec">
-                <li>IG</li>
-            </ul>
-        </div>
+<body>
+    <!-- Info Header -->
+    <div class="info-header red-bg">
+        <ul>
+            <li class="mHide"><i class="fa-solid fa-globe"></i> Lake Havasu City, AZ</li>
+            <li><i class="fa-solid fa-envelope"></i> hello@exampledomain.com</li>
+            <li><i class="fa-solid fa-phone"></i> 928-000-0000</li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">Hot Dog Vendor</div>
         <div class="nav-items">
-            <div class="navbar-brand">PLACEHOLDER</div>
             <ul>
-                <li>
-                    <a class="nav-item active" href="#">One</a>
-                </li>
-                <li>
-                    <a class="nav-item" href="#">Two</a>
-                </li>
+                <li class="nav-item"><a href="#" class="active">One</a></li>
+                <li class="nav-item"><a href="#">Two</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-img">
+            <img src="https://via.placeholder.com/400x300" alt="Delicious Hot Dog">
+        </div>
+        <div class="about-text">
+            <h2>Best Hot Dogs in Town!</h2>
+            <p>Our hot dog cart serves the most delicious, juicy, and freshly-made hot dogs. Made with love and the
+                finest ingredients, we bring you an unforgettable street food experience. Try a bite and taste the
+                difference!</p>
+            <button class="book-now">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-header">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> hello@exampledomain.com</p>
+                <p><i class="fa-solid fa-phone"></i> 928-000-0000</p>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" style="resize: none;" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

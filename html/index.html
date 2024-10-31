@@ -51,48 +51,45 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: white;
+            background-color: #fff;
             padding: 1rem 2rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #c0392b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .nav-items ul {
             list-style: none;
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .nav-item a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
 
         .nav-item a:hover,
         .nav-item a.active {
-            color: #c0392b;
+            background-color: #c0392b;
+            color: white;
         }
 
         /* About Section */
-        /* .about-section {
-            display: flex;
-            padding: 50px;
-            gap: 2rem;
-            align-items: center;
-        } */
-
         .about-section {
             display: flex;
             justify-content: center;
-            /* Center horizontally */
             align-items: center;
-            /* Center vertically */
             padding: 50px;
             gap: 2rem;
         }
@@ -119,18 +116,34 @@
             color: #555;
         }
 
+        .book-now {
+            background-color: #c0392b;
+            color: white;
+            margin-top: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now:hover {
+            background-color: #a7281f;
+        }
+
         /* Contact Section */
         .contact-section {
-            background-color: #333;
+            background: url('https://via.placeholder.com/1920x400') center center/cover no-repeat;
             color: white;
-            padding: 50px;
+            padding: 60px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .contact-header h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #c0392b;
         }
@@ -149,6 +162,7 @@
 
         .contact-info p {
             margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         .contact-info i {
@@ -158,7 +172,7 @@
 
         .contact-form {
             flex: 2;
-            background-color: #444;
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -198,36 +212,8 @@
             background-color: #a7281f;
         }
 
-
-        .book-now {
-            background-color: #c0392b;
-            /* Button color */
-            color: white;
-            margin-top: 1em;
-            /* Text color */
-            padding: 10px 20px;
-            /* Padding */
-            border: none;
-            /* No border */
-            border-radius: 4px;
-            /* Rounded corners */
-            font-size: 1rem;
-            /* Font size */
-            cursor: pointer;
-            /* Pointer cursor */
-            transition: background-color 0.3s ease;
-            /* Smooth transition */
-        }
-
-        .book-now:hover {
-            background-color: #a7281f;
-            /* Darker shade on hover */
-        }
-
-
         /* Responsive Design */
         @media (max-width: 768px) {
-
             .about-section,
             .contact-content {
                 flex-direction: column;
@@ -261,8 +247,10 @@
         <div class="navbar-brand">Hot Dog Vendor</div>
         <div class="nav-items">
             <ul>
-                <li class="nav-item"><a href="#" class="active">One</a></li>
-                <li class="nav-item"><a href="#">Two</a></li>
+                <li class="nav-item"><a href="#" class="active">Home</a></li>
+                <li class="nav-item"><a href="#">Menu</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -296,7 +284,7 @@
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
                     <textarea rows="5" style="resize: none;" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <button type="submit">Let's Chat</button>
                 </form>
             </div>
         </div>
