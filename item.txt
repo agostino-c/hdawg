@@ -1,6 +1,3 @@
-!
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +21,6 @@
             font-family: 'Roboto';
         }
 
-
         nav {
             width: 100vw;
         }
@@ -35,10 +31,11 @@
             background-blend-mode: overlay;
         }
 
-
         .info-header {
             height: 10vh;
             display: flex;
+            padding: 0 75px; /* Added padding for consistency */
+            align-items: center; /* Center items vertically */
         }
 
         .information-sec {
@@ -47,6 +44,8 @@
 
         .socials-sec {
             flex: 1;
+            display: flex;
+            align-items: center; /* Center social items vertically */
         }
 
         .info-header ul {
@@ -62,7 +61,6 @@
             font-size: large;
         }
 
-
         .information-sec li {
             display: flex;
             align-items: center;
@@ -71,89 +69,46 @@
             color: white;
         }
 
-
-        /* .nav-items {
-            height: 10vh;
-            background-color: white;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-items .navbar-brand {
-            font-size: larger;
-            font-weight: bold;
-        }
-
-        .nav-items ul {
-            list-style-type: none;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 1em;
-        }
-
-        .nav-item {
-            text-decoration: none;
-            font-size: large;
-
-            color: #323232;
-        }
-
-        .active {
-            font-weight: normal;
-        } */
-
         .nav-items {
-            height: 10vh;
+            height: 10vh; /* Match the height */
             background-color: white;
             display: flex;
-            align-items: center;
-            /* padding: 0 75px; */
-            /* Add horizontal padding for space */
+            align-items: center; /* Center items vertically */
+            padding: 0 75px; /* Added horizontal padding for consistency */
         }
 
         .navbar-brand {
             font-size: larger;
             font-weight: bold;
-            flex: 3;
-            /* Push the brand to the left */
+            flex: 3; /* Push the brand to the left */
         }
 
         .nav-items ul {
             list-style-type: none;
             margin: 0;
             display: flex;
-            /* Center links */
-            align-items: center;
-            column-gap: 2em;
+            align-items: center; /* Center links vertically */
+            column-gap: 2em; /* Consistent gap */
             flex: 1;
-            /* Increased gap for better spacing */
         }
 
         .nav-item {
             text-decoration: none;
             font-size: large;
             color: #323232;
-            padding: 10px 15px;
-            /* Add padding for clickable area */
-            border-radius: 5px;
-            /* Slightly rounded corners */
-            transition: background-color 0.3s;
-            /* Smooth transition for hover effect */
+            padding: 10px 15px; /* Add padding for clickable area */
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
         }
 
         .nav-item:hover {
-            background-color: #f0f0f0;
-            /* Light background on hover */
-            color: #c0392b;
-            /* Change text color on hover */
+            background-color: #f0f0f0; /* Light background on hover */
+            color: #c0392b; /* Change text color on hover */
         }
 
         .active {
             font-weight: normal;
-            border-bottom: 2px solid #c0392b;
-            /* Underline for the active link */
+            border-bottom: 2px solid #c0392b; /* Underline for the active link */
         }
     </style>
 </head>
@@ -179,7 +134,17 @@
                 <li>IG</li>
             </ul>
         </div>
-xt
+        <div class="nav-items">
+            <div class="navbar-brand">PLACEHOLDER</div>
+            <ul>
+                <li>
+                    <a class="nav-item active" href="#">One</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#">Two</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </body>
 
