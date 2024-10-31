@@ -15,32 +15,34 @@
             font-family: 'Roboto';
         }
 
-        body {
-            background-color: red;
-        }
-
         
         nav {
             width: 100vw;
         }
 
+        .red-bg {
+            background: linear-gradient(90deg, hsla(0, 70%, 50%, 1) 0%, hsla(0, 100%, 40%, 1) 100%);
+            background-image: './texture.png';
+            background-blend-mode: overlay;
+        }
+
 
         .info-header {
             height: 10vh;
-            background-color: red;
+            /* background-color: red; */
         }
 
 
         .nav-items {
-            height: 8vh;
+            height: 10vh;
             background-color: white;
         }
 
     </style>
 </head>
-<body>
+<body class="red-bg">
     <nav>
-        <div class="info-header">
+        <div class="info-header red-bg">
 
         </div>
         <div class="nav-items">
